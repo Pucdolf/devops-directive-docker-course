@@ -12,8 +12,7 @@ run-postgres:
 .PHONY: run-api-node
 run-api-node:
 	@echo Starting node api
-	cd api-node && \
-		DATABASE_URL=${DATABASE_URL} \
+	cd api-node && \cd
 		npm run dev
 
 .PHONY: run-api-golang
