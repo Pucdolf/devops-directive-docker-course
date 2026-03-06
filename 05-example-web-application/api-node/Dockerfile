@@ -7,7 +7,9 @@ COPY package*.json ./
 # Teraz npm już będzie widoczny
 RUN npm install
 
+USER node
+
 # Kopiujemy pliki projektu
-COPY ./src .
+COPY --chown=node:node ./src .
 
 CMD ["node", "index.js"]
