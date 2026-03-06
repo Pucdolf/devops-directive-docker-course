@@ -10,4 +10,4 @@ RUN npm install
 # Kopiujemy pliki projektu
 COPY ./src .
 
-CMD ["npm", "run", "dev"]
+CMD ["node", "index.js"]
