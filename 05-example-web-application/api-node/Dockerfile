@@ -1,11 +1,13 @@
 FROM node:19.6-alpine
 
-# Kopiujemy pliki projektu
+WORKDIR usr/src/app
+
 COPY package*.json ./
 
 # Teraz npm już będzie widoczny
 RUN npm install
 
-COPY . .
+# Kopiujemy pliki projektu
+COPY ./src .
 
 CMD ["npm", "run", "dev"]
