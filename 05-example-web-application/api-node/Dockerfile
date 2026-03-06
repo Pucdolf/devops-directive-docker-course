@@ -2,10 +2,12 @@ FROM node:19.6-alpine
 
 WORKDIR usr/src/app
 
+ENV NODE_ENV production
+
 COPY package*.json ./
 
 # Teraz npm już będzie widoczny
-RUN npm install
+RUN npm ci --only=production
 
 USER node
 
